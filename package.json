@@ -1,0 +1,19 @@
+{
+  "name": "event-tracker",
+  "version": "1.0.0",
+  "description": "My event tracker using a MEAN stack (MongoDB Express Angular &amp; Node)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sareh/event-tracker.git"
+  },
+  "author": "Sareh Heidari (sareh)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sareh/event-tracker/issues"
+  },
+  "homepage": "https://github.com/sareh/event-tracker#readme"
+}
