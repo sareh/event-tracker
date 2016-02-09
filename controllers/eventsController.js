@@ -37,9 +37,17 @@ function eventsDelete(req, res){
  });
 }
 
+function eventsCreate(req, res) {
+  Event.create(req.body, function(err, event) {
+    if (err) return res.status(500).json({message: "Something went wrong with creating this event."});
+    return res.status(200).json({ event: event})
+  })
+}
+
 module.exports = {
   eventsIndex:  eventsIndex,
   eventsShow:   eventsShow,
   eventsUpdate: eventsUpdate,
-  eventsDelete: eventsDelete
+  eventsDelete: eventsDelete,
+  eventsCreate: eventsCreate
 }
