@@ -1,13 +1,13 @@
 angular
   .module('event-tracker')
-  .service('AuthInterceptor',AuthInterceptor)
+  .service('authInterceptor',AuthInterceptor)
 
-AuthInterceptor.$inject = ['API', 'TokenService'];
+AuthInterceptor.$inject = ['API', 'tokenService'];
 
-function AuthInterceptor(API, TokenService) {
+function AuthInterceptor(API, tokenService) {
   return {
     request: function(config){
-      var token = TokenService.getToken();
+      var token = tokenService.getToken();
 
       if (config.url.indexOf(API) === 0 && token) {
         config.headers.Authorization = 'Bearer ' + token;
@@ -16,7 +16,7 @@ function AuthInterceptor(API, TokenService) {
     },
     response: function(res){
       if (res.config.url.indexOf(API) === 0 && res.data.token) {
-        TokenService.setToken(res.data.token);
+        tokenService.setToken(res.data.token);
       }
       return res;
     }

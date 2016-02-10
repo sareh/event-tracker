@@ -2,9 +2,9 @@ angular
   .module('event-tracker')
   .service('currentUser', CurrentUser);
 
-CurrentUser.$inject = ["TokenService"];
+CurrentUser.$inject = ['tokenService'];
 
-function CurrentUser(TokenService){
+function CurrentUser(tokenService){
 
   var self  = this;
   self.user = {};

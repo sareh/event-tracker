@@ -1,13 +1,12 @@
 angular
   .module('event-tracker')
-  .service('TokenService', TokenService);
+  .service('tokenService', TokenService);
 
 TokenService.$inject = ['$window', 'jwtHelper'];
 
 function TokenService($window, jwtHelper) {
 
   var self = this;
-
   self.getToken    = getToken;
   self.setToken    = setToken;
   self.removeToken = removeToken;
