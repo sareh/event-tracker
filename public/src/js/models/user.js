@@ -1,6 +1,6 @@
 angular
   .module('event-tracker')
-  .factory('user', User)
+  .factory('User', User)
 
 User.$inject = ['API', '$resource'];
 
