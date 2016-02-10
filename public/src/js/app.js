@@ -1,5 +1,5 @@
 angular
-  .module('event-tracker', ['angular-jwt', 'ngResource', 'ui.router'])
+  .module('event-tracker', ['angular-jwt', 'ngResource', 'ui.router', 'ngAria'])
   .constant('API', 'http://localhost:3000/api')
   .config(MainRouter)
   .config(function($httpProvider){
