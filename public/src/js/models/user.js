@@ -18,10 +18,10 @@ function User(API, $resource) {
       'delete':    { method: 'DELETE' },
       'register':  { method: 'POST', 
                      url: API +'/register' 
-    },
-    'login': { url: API + '/login',
-               method: "POST"
-             }
+                    },
+      'login':     { method: 'POST',
+                     url: API + '/login'
+                   }
     }
   );
 
